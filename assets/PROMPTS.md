@@ -38,9 +38,9 @@
 
 | 파일명 | 표정 (위 묘사 + 아래) |
 |---|---|
-| `엘리시아.png` | neutral confident expression, faint composed smile, looking straight ahead. |
-| `엘리시아_smile.png` | a warm genuine smile, softer eyes, slightly relaxed posture. |
-| `엘리시아_cold.png` | a cold disdainful expression, raised chin, narrowed eyes, villainess smirk. |
+| `elisia.png` | neutral confident expression, faint composed smile, looking straight ahead. |
+| `elisia_smile.png` | a warm genuine smile, softer eyes, slightly relaxed posture. |
+| `elisia_cold.png` | a cold disdainful expression, raised chin, narrowed eyes, villainess smirk. |
 
 ### 칼리안 아스테르 (남주, 북부대공)
 공통 묘사:
@@ -48,8 +48,8 @@
 
 | 파일명 | 표정 (위 묘사 + 아래) |
 |---|---|
-| `칼리안.png` | calm composed expression, reserved and watchful. |
-| `칼리안_cold.png` | a cold guarded expression, slight frown, arms crossed, intimidating. |
+| `kalian.png` | calm composed expression, reserved and watchful. |
+| `kalian_cold.png` | a cold guarded expression, slight frown, arms crossed, intimidating. |
 
 ---
 

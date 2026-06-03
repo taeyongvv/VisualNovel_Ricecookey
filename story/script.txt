@@ -4,7 +4,7 @@
 == intro ==
 @bg dawn_room
 @music bgm_main
-@show 엘리시아 cold center
+@show elisia cold center
 《악녀는 남편 대신 상단을 샀다》
 장르 — 로맨스판타지 · 악녀 · 경영
 원작 속 엘리시아는 냉혹한 북부대공과 결혼한 뒤 여주를 괴롭히다 처형당하는 악녀였다. 빙의한 그녀는 결혼을 피하기 위해, 남편감을 설득하는 대신 그의 빚더미 보급 상단을 통째로 사버린다.
@@ -36,7 +36,7 @@
 @hide
 @bg dawn_room
 @music bgm_main
-@show 엘리시아 cold center
+@show elisia cold center
 ── 제1편 ──
 꿈속에서도 단두대의 칼날은 차가웠다.
 엘리시아 로웬은 눈을 뜨는 순간 자신의 목을 짚었다.
@@ -142,7 +142,7 @@
 @hide
 @bg study
 @music bgm_main
-@show 엘리시아 center
+@show elisia center
 ── 제2편 ──
 파혼장 대신 빚 장부를 사는 여자가 있다는 소문은 아직 퍼지지 않았다.
 하지만 엘리시아 로웬은 소문이 퍼지기 전에 움직이는 사람이었다.
@@ -236,7 +236,7 @@
 @hide
 @bg salon
 @music bgm_tense
-@show 엘리시아 cold center
+@show elisia cold center
 ── 제3편 ──
 사교계는 비웃었다.
 로웬 가문의 아가씨가 파혼도 하기 전에 망한 상단의 빚 장부를 샀다는 소문은 하루 만에 살롱 세 곳을 돌았다.
@@ -329,7 +329,7 @@
 @hide
 @bg auction
 @music bgm_tense
-@show 엘리시아 center
+@show elisia center
 ── 제4편 ──
 경매장은 전쟁터였다.
 제국 상업 거래소 3층 경매실.
@@ -426,7 +426,7 @@
 @hide
 @bg northroad
 @music bgm_main
-@show 엘리시아 center
+@show elisia center
 ── 제5편 ──
 북부 식량길은 썩고 있었다.
 문자 그대로였다.
@@ -519,8 +519,8 @@
 @hide
 @bg study
 @music bgm_tense
-@show 엘리시아 cold left
-@show 칼리안 cold right
+@show elisia cold left
+@show kalian cold right
 ── 제6편 ──
 북부대공 칼리안 아스테르가 파혼 담판을 하러 왔다.
 그것이 공식적인 방문 이유였다.
@@ -616,7 +616,7 @@
 @hide
 @bg study
 @music bgm_main
-@show 엘리시아 center
+@show elisia center
 ── 제7편 ──
 엘리시아: 공작 부인 자리는 필요 없습니다.
 엘리시아 로웬이 말했다.
@@ -715,7 +715,7 @@
 @hide
 @bg court
 @music bgm_tense
-@show 엘리시아 cold center
+@show elisia cold center
 ── 제8편 ──
 압수 명령서는 새벽에 도착했다.
 왕실 재무관 베른하르트 크라우스의 직인이 찍힌 문서.
@@ -807,7 +807,7 @@
 @hide
 @bg court
 @music bgm_tense
-@show 엘리시아 cold center
+@show elisia cold center
 ── 제9편 ──
 압수 집행관들이 창고 앞에 도착했을 때, 창고 문에는 성당 문장이 새겨진 봉인이 붙어 있었다.
 집행관들이 멈췄다.
@@ -901,7 +901,7 @@
 @hide
 @bg salon
 @music bgm_tense
-@show 엘리시아 center
+@show elisia center
 ── 제10편 ──
 여주 이리나 벨라르는 눈물이 아름다운 여자였다.
 사교계 살롱에서 그녀가 눈물을 흘리면 귀족 부인들이 손수건을 내밀었고, 젊은 귀족 자제들이 분노했으며, 왕실 재무관이 움직였다.
@@ -992,8 +992,8 @@
 @hide
 @bg ballroom
 @music bgm_romance
-@show 엘리시아 smile left
-@show 칼리안 cold right
+@show elisia smile left
+@show kalian cold right
 ── 제11편 ──
 무도회장에 칼리안 아스테르가 나타났을 때, 그의 손에는 춤 신청 카드가 아니라 계약서가 들려 있었다.
 샹들리에 불빛 아래 그 장면을 목격한 귀족들이 술잔을 멈췄다.
@@ -1083,7 +1083,7 @@
 @hide
 @bg salon
 @music bgm_tense
-@show 엘리시아 cold center
+@show elisia cold center
 ── 제12편 ──
 향수가 독이라는 소문은 사흘 만에 제국 전역에 퍼졌다.
 엘리시아 로웬의 향수 원료 창고에서 생산된 향수를 맡은 귀족 부인이 두통을 호소했다는 이야기.
@@ -1176,7 +1176,7 @@
 @hide
 @bg banquet
 @music bgm_tense
-@show 엘리시아 cold center
+@show elisia cold center
 ── 제13편 ──
 독살 사건의 범인은 왕실 재무관의 조카였다.
 전생에서 엘리시아는 그 사실을 처형장에서야 알았다.
@@ -1270,7 +1270,7 @@
 @hide
 @bg treasury
 @music bgm_tense
-@show 엘리시아 center
+@show elisia center
 ── 제14편 ──
 왕실 금고가 비는 밤은 제국력 9월 첫째 주였다.
 전생에서 엘리시아는 그 사실을 몰랐다.
@@ -1362,8 +1362,8 @@
 @hide
 @bg finale
 @music bgm_romance
-@show 엘리시아 smile left
-@show 칼리안 cold right
+@show elisia smile left
+@show kalian cold right
 ── 제15편 ──
 칼리안 아스테르가 내민 계약서의 첫 줄에는 이렇게 적혀 있었다.
 “본 계약의 당사자 엘리시아 로웬은 로스탄 북부 보급 상단의 공동 회장으로서—”
@@ -1467,7 +1467,7 @@
 == ending ==
 @bg finale
 @music bgm_romance
-@show 엘리시아 smile center
+@show elisia smile center
 ── 끝 ──
 《악녀는 남편 대신 상단을 샀다》 — 폴리싱본 15편 완결.
 @end

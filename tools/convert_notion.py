@@ -53,15 +53,18 @@ SCENE = {
 
 
 def scene_commands(num):
-    """편 시작 시 배경/BGM/캐릭터 연출 명령 리스트."""
+    """편 시작 시 배경/BGM/캐릭터 연출 명령 리스트.
+
+    캐릭터 스프라이트 키는 영문(elisia/kalian) — 파일명 인코딩 이슈 회피용.
+    """
     bg, bgm, expr, hero = SCENE.get(num, ("study", "bgm_main", "neutral", False))
     cmds = ["@hide", f"@bg {bg}", f"@music {bgm}"]
     heroine_expr = "" if expr == "neutral" else f" {expr}"
     if hero:
-        cmds.append(f"@show 엘리시아{heroine_expr} left")
-        cmds.append("@show 칼리안 cold right")
+        cmds.append(f"@show elisia{heroine_expr} left")
+        cmds.append("@show kalian cold right")
     else:
-        cmds.append(f"@show 엘리시아{heroine_expr} center")
+        cmds.append(f"@show elisia{heroine_expr} center")
     return cmds
 
 QUOTE_RE = re.compile(r'[“"]([^“”"]+)[”"]|[‘\']([^‘’\']+)[’\']')
@@ -170,7 +173,7 @@ def main():
     out.append("== intro ==")
     out.append("@bg dawn_room")
     out.append("@music bgm_main")
-    out.append("@show 엘리시아 cold center")
+    out.append("@show elisia cold center")
     out.append(f"《{TITLE}》")
     out.append(f"장르 — {GENRE}")
     out.append(SYNOPSIS)
@@ -215,7 +218,7 @@ def main():
     out.append("== ending ==")
     out.append("@bg finale")
     out.append("@music bgm_romance")
-    out.append("@show 엘리시아 smile center")
+    out.append("@show elisia smile center")
     out.append("── 끝 ──")
     out.append(f"《{TITLE}》 — 폴리싱본 15편 완결.")
     out.append("@end")

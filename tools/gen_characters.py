@@ -75,12 +75,14 @@ KALIAN = dict(hair="#20242e", skin="#e7cdb8", cloth="#1d2c44",
 
 def main():
     os.makedirs(OUT, exist_ok=True)
+    # 파일명은 영문(romanized)으로 — 일부 호스트/CDN의 한글 파일명 인코딩 이슈 회피.
+    # 화면에 표시되는 화자 이름("엘리시아")은 스크립트의 대사 라인에서 별도로 관리됨.
     files = {
-        "엘리시아": sprite(ELISIA, "neutral"),
-        "엘리시아_smile": sprite(ELISIA, "smile"),
-        "엘리시아_cold": sprite(ELISIA, "cold"),
-        "칼리안": sprite(KALIAN, "neutral"),
-        "칼리안_cold": sprite(KALIAN, "cold"),
+        "elisia": sprite(ELISIA, "neutral"),
+        "elisia_smile": sprite(ELISIA, "smile"),
+        "elisia_cold": sprite(ELISIA, "cold"),
+        "kalian": sprite(KALIAN, "neutral"),
+        "kalian_cold": sprite(KALIAN, "cold"),
     }
     for name, data in files.items():
         open(os.path.join(OUT, f"{name}.svg"), "w", encoding="utf-8").write(data)
