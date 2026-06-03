@@ -1,0 +1,46 @@
+name: Deploy to GitHub Pages
+
+# 정적 사이트(루트 전체)를 GitHub Pages로 배포합니다.
+on:
+  push:
+    branches:
+      - main
+      - claude/project-structure-overview-MuLZ8
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+# 동시 배포 1개만 유지 (진행 중 배포는 취소하지 않고 큐잉)
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate story scripts
+        # 깨진 스크립트(존재하지 않는 라벨 점프 등)는 배포를 막습니다.
+        run: node tools/validate.js story/*.txt
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          # 저장소 루트 전체를 그대로 업로드 (빌드 불필요)
+          path: "."
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

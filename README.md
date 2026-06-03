@@ -123,6 +123,39 @@ VisualNovel_Ricecookey/
 
 ---
 
+## 스크립트 검증 (linter)
+
+스토리 텍스트가 형식에 맞는지, 분기가 깨지지 않았는지 검사합니다.
+
+```bash
+node tools/validate.js story/script.txt
+node tools/validate.js story/*.txt        # 여러 파일 한 번에
+```
+
+검사 항목:
+- **오류**: 존재하지 않는 라벨로 점프, 중복 라벨, 점프 대상 없는 선택지, 인자 누락(`@bg` 등)
+- **경고**: 고립된(도달 불가) 라벨, `@end`/점프 없이 다음 라벨로 흘러넘치는 구간, 대사 없는 스크립트
+- **정보**: 라벨 수, 화자 목록, 명령 통계
+
+오류가 있으면 종료 코드 `1` 을 반환하므로 CI에 연동됩니다.
+GitHub Actions 배포 워크플로에서도 배포 전에 자동으로 이 검증을 실행하여,
+깨진 스크립트는 배포되지 않습니다.
+
+---
+
+## 배포 (GitHub Pages)
+
+`main` 또는 작업 브랜치에 푸시하면 `.github/workflows/deploy-pages.yml` 이
+저장소 루트를 그대로 GitHub Pages로 배포합니다 (빌드 불필요).
+
+최초 1회만 저장소 설정이 필요합니다:
+**Settings → Pages → Build and deployment → Source 를 "GitHub Actions" 로 변경.**
+
+이후 푸시할 때마다 자동 재배포되며, 배포 URL은 Actions 실행 로그의
+`deploy` 잡 또는 **Settings → Pages** 상단에서 확인할 수 있습니다.
+
+---
+
 ## 조작
 
 - **클릭 / Space / Enter / →** : 다음으로 진행 (타이핑 중이면 즉시 완성)
