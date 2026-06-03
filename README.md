@@ -123,6 +123,25 @@ VisualNovel_Ricecookey/
 
 ---
 
+## 에셋 생성 (배경 · 캐릭터 · BGM)
+
+AI 일러스트/음원 도구 없이, 브라우저가 직접 렌더하는 형식으로 에셋을 생성합니다.
+
+```bash
+python3 tools/gen_backgrounds.py   # assets/bg/*.svg   (장면 배경, 벡터)
+python3 tools/gen_characters.py    # assets/char/*.svg (캐릭터 실루엣 스프라이트)
+python3 tools/gen_bgm.py           # assets/audio/*.wav (합성 앰비언트 BGM 루프)
+```
+
+- 배경/캐릭터는 그라데이션·조명·실루엣 기반 **스타일라이즈드 SVG**입니다.
+- BGM은 표준 라이브러리만으로 합성한 **WAV 루프**(메인/긴장/로맨스 3종)입니다.
+- 추후 진짜 일러스트·음원이 생기면 **같은 파일명으로 교체**만 하면 됩니다
+  (예: `assets/bg/study.svg` → `assets/bg/study.png`. 엔진이 확장자를 자동 탐색).
+
+편별 배경·BGM·캐릭터 매핑은 `tools/convert_notion.py` 의 `SCENE` 표에서 관리합니다.
+
+---
+
 ## 스크립트 검증 (linter)
 
 스토리 텍스트가 형식에 맞는지, 분기가 깨지지 않았는지 검사합니다.

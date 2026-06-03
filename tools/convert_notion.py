@@ -31,6 +31,39 @@ SYNOPSIS = (
 HEROINE = ("엘리시아", "로웬")
 HERO = ("칼리안", "아스테르")
 
+# 편별 연출: (배경, BGM, 엘리시아 표정, 칼리안 등장 여부)
+# 배경/캐릭터/BGM 에셋은 tools/gen_*.py 로 생성됨.
+SCENE = {
+    1:  ("dawn_room", "bgm_main",    "cold",    False),
+    2:  ("study",     "bgm_main",    "neutral", False),
+    3:  ("salon",     "bgm_tense",   "cold",    False),
+    4:  ("auction",   "bgm_tense",   "neutral", False),
+    5:  ("northroad", "bgm_main",    "neutral", False),
+    6:  ("study",     "bgm_tense",   "cold",    True),
+    7:  ("study",     "bgm_main",    "neutral", False),
+    8:  ("court",     "bgm_tense",   "cold",    False),
+    9:  ("court",     "bgm_tense",   "cold",    False),
+    10: ("salon",     "bgm_tense",   "neutral", False),
+    11: ("ballroom",  "bgm_romance", "smile",   True),
+    12: ("salon",     "bgm_tense",   "cold",    False),
+    13: ("banquet",   "bgm_tense",   "cold",    False),
+    14: ("treasury",  "bgm_tense",   "neutral", False),
+    15: ("finale",    "bgm_romance", "smile",   True),
+}
+
+
+def scene_commands(num):
+    """편 시작 시 배경/BGM/캐릭터 연출 명령 리스트."""
+    bg, bgm, expr, hero = SCENE.get(num, ("study", "bgm_main", "neutral", False))
+    cmds = ["@hide", f"@bg {bg}", f"@music {bgm}"]
+    heroine_expr = "" if expr == "neutral" else f" {expr}"
+    if hero:
+        cmds.append(f"@show 엘리시아{heroine_expr} left")
+        cmds.append("@show 칼리안 cold right")
+    else:
+        cmds.append(f"@show 엘리시아{heroine_expr} center")
+    return cmds
+
 QUOTE_RE = re.compile(r'[“"]([^“”"]+)[”"]|[‘\']([^‘’\']+)[’\']')
 
 # 발화동사 — 이름과 가까이 있을 때만 화자로 인정 (오attribution 방지)
@@ -135,6 +168,9 @@ def main():
 
     # ----- 인트로 -----
     out.append("== intro ==")
+    out.append("@bg dawn_room")
+    out.append("@music bgm_main")
+    out.append("@show 엘리시아 cold center")
     out.append(f"《{TITLE}》")
     out.append(f"장르 — {GENRE}")
     out.append(SYNOPSIS)
@@ -158,6 +194,7 @@ def main():
         is_last = idx == len(pairs) - 1
         next_label = "ending" if is_last else f"ch{num + 1:02d}"
         out.append(f"== ch{num:02d} ==")
+        out.extend(scene_commands(num))
         out.append(f"── 제{num}편 ──")
         # 챕터 전체를 한 번에 토큰화해야 대사와 인접 지문(다른 문단에 있을 수 있음)을
         # 함께 보고 화자를 추정할 수 있다.
@@ -176,6 +213,9 @@ def main():
 
     # ----- 엔딩 -----
     out.append("== ending ==")
+    out.append("@bg finale")
+    out.append("@music bgm_romance")
+    out.append("@show 엘리시아 smile center")
     out.append("── 끝 ──")
     out.append(f"《{TITLE}》 — 폴리싱본 15편 완결.")
     out.append("@end")

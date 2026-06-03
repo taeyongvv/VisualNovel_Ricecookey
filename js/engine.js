@@ -12,7 +12,7 @@
   const SETTINGS_KEY = "vn_ricecookey_settings";
 
   // 이미지/오디오 파일 후보 확장자
-  const IMG_EXT = ["png", "jpg", "jpeg", "webp", "gif"];
+  const IMG_EXT = ["svg", "png", "jpg", "jpeg", "webp", "gif"];
   const AUDIO_EXT = ["mp3", "ogg", "wav", "m4a"];
 
   class Engine {
@@ -116,13 +116,18 @@
 
     /* ---------- 오디오 ---------- */
     playMusic(name) {
-      this.state.music = name;
       const bgm = this.dom.bgm;
       if (!name || name === "stop" || name === "none") {
+        this.state.music = "";
         bgm.pause();
         bgm.removeAttribute("src");
         return;
       }
+      // 같은 곡이 이미 재생 중이면 끊지 않고 그대로 이어 간다 (화 전환 시 끊김 방지)
+      if (this.state.music === name && bgm.getAttribute("src") && !bgm.paused) {
+        return;
+      }
+      this.state.music = name;
       const candidates = this.resolveAsset("assets/audio", name, AUDIO_EXT);
       this.playAudioCandidates(bgm, candidates, true);
     }
