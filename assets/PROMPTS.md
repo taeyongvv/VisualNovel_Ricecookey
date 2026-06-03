@@ -65,29 +65,33 @@ A palace terrace at sunrise overlooking the imperial city, warm golden dawn ligh
 
 ## 캐릭터 (assets/char/)  — 투명 배경, 세로
 
+> **아트 스타일**: 한국·일본 로맨스판타지 웹툰(manhwa/otome) 풍. 맑은 셀셰이딩,
+> 섬세한 라인, 파스텔·발광 톤, 보석처럼 빛나는 큰 눈, 반짝임(sparkle)과 부드러운 빛.
+> 아래 프롬프트에 모두 반영되어 있습니다. **반드시 transparent background** 로 생성하세요.
+
 ### `elisia.png`  (엘리시아 — 기본)
 ```
-A beautiful villainess noblewoman in her early twenties with long platinum-silver hair, sharp garnet-crimson eyes, pale flawless skin, and an elegant calculating aura, wearing a deep crimson and black noble gown with gold embroidery. Neutral confident expression with a faint composed smile, looking straight ahead. Visual-novel standing sprite, three-quarter (knee-up) body, facing the viewer, centered, transparent background, soft cel-shaded anime illustration with even full-body lighting, romance-fantasy style, highly detailed, no text, no watermark.
+A breathtakingly beautiful villainess noblewoman in her early twenties, long flowing platinum-silver hair, large sparkling garnet-crimson jewel-like eyes, delicate refined features, pale luminous skin, an elegant and alluring aura. She wears an exquisite deep-crimson and black romance-fantasy gown with gold embroidery, lace and pearls. Serene confident expression with a faint graceful smile, looking at the viewer. Korean romance-fantasy webtoon (manhwa) illustration, josei / otome aesthetic, soft clean cel-shading, delicate polished line art, luminous pastel palette, ethereal soft glow with subtle sparkles. Visual-novel standing sprite, upper-body to knee-up, facing the viewer, centered, transparent background, no text, no watermark.
 ```
 
 ### `elisia_smile.png`  (엘리시아 — 미소)
 ```
-A beautiful villainess noblewoman in her early twenties with long platinum-silver hair, sharp garnet-crimson eyes, pale flawless skin, wearing a deep crimson and black noble gown with gold embroidery. A warm genuine smile, softened eyes, slightly relaxed posture. Visual-novel standing sprite, three-quarter (knee-up) body, facing the viewer, centered, transparent background, soft cel-shaded anime illustration with even full-body lighting, romance-fantasy style, highly detailed, no text, no watermark.
+A breathtakingly beautiful villainess noblewoman in her early twenties, long flowing platinum-silver hair, large sparkling garnet-crimson jewel-like eyes, delicate refined features, pale luminous skin. She wears an exquisite deep-crimson and black romance-fantasy gown with gold embroidery, lace and pearls. A warm radiant genuine smile, softly blushing cheeks, gentle eyes. Korean romance-fantasy webtoon (manhwa) illustration, josei / otome aesthetic, soft clean cel-shading, delicate polished line art, luminous pastel palette, ethereal soft glow with subtle sparkles. Visual-novel standing sprite, upper-body to knee-up, facing the viewer, centered, transparent background, no text, no watermark.
 ```
 
 ### `elisia_cold.png`  (엘리시아 — 냉소)
 ```
-A beautiful villainess noblewoman in her early twenties with long platinum-silver hair, sharp garnet-crimson eyes, pale flawless skin, wearing a deep crimson and black noble gown with gold embroidery. A cold disdainful expression, chin slightly raised, narrowed eyes, a faint villainess smirk. Visual-novel standing sprite, three-quarter (knee-up) body, facing the viewer, centered, transparent background, soft cel-shaded anime illustration with even full-body lighting, romance-fantasy style, highly detailed, no text, no watermark.
+A breathtakingly beautiful villainess noblewoman in her early twenties, long flowing platinum-silver hair, large sharp garnet-crimson jewel-like eyes, delicate refined features, pale luminous skin. She wears an exquisite deep-crimson and black romance-fantasy gown with gold embroidery, lace and pearls. A cold disdainful expression, chin slightly raised, narrowed alluring eyes, an elegant villainess smirk. Korean romance-fantasy webtoon (manhwa) illustration, josei / otome aesthetic, soft clean cel-shading, delicate polished line art, luminous pastel palette, ethereal cool glow with subtle sparkles. Visual-novel standing sprite, upper-body to knee-up, facing the viewer, centered, transparent background, no text, no watermark.
 ```
 
 ### `kalian.png`  (칼리안 — 기본)
 ```
-A tall, stern, handsome northern grand duke in his late twenties with short black hair, cool steel-blue eyes, and a strong jaw, wearing a dark navy military-noble coat with silver trim and epaulettes. Calm composed expression, reserved and watchful. Visual-novel standing sprite, three-quarter (knee-up) body, facing the viewer, centered, transparent background, soft cel-shaded anime illustration with even full-body lighting, romance-fantasy style, highly detailed, no text, no watermark.
+An exceptionally handsome northern grand duke in his late twenties, short tousled black hair, cool sparkling steel-blue jewel-like eyes, sharp elegant refined features, fair skin, a tall noble bearing. He wears a luxurious dark-navy romance-fantasy military-noble coat with silver trim, epaulettes and embroidery. Calm composed expression, reserved and gentle, looking at the viewer. Korean romance-fantasy webtoon (manhwa) illustration, josei / otome male-lead aesthetic, soft clean cel-shading, delicate polished line art, luminous palette, ethereal soft glow with subtle sparkles. Visual-novel standing sprite, upper-body to knee-up, facing the viewer, centered, transparent background, no text, no watermark.
 ```
 
 ### `kalian_cold.png`  (칼리안 — 냉정)
 ```
-A tall, stern, handsome northern grand duke in his late twenties with short black hair, cool steel-blue eyes, and a strong jaw, wearing a dark navy military-noble coat with silver trim and epaulettes. A cold guarded expression with a slight frown, arms crossed, intimidating presence. Visual-novel standing sprite, three-quarter (knee-up) body, facing the viewer, centered, transparent background, soft cel-shaded anime illustration with even full-body lighting, romance-fantasy style, highly detailed, no text, no watermark.
+An exceptionally handsome northern grand duke in his late twenties, short tousled black hair, cool sparkling steel-blue jewel-like eyes, sharp elegant refined features, fair skin. He wears a luxurious dark-navy romance-fantasy military-noble coat with silver trim, epaulettes and embroidery. A cold guarded expression with a faint frown, intense eyes, an aloof intimidating elegance. Korean romance-fantasy webtoon (manhwa) illustration, josei / otome male-lead aesthetic, soft clean cel-shading, delicate polished line art, cool luminous palette, ethereal glow with subtle sparkles. Visual-novel standing sprite, upper-body to knee-up, facing the viewer, centered, transparent background, no text, no watermark.
 ```
 
 ---
