@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Visual Novel — Ricecookey</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div id="game">
+    <!-- 배경 레이어 -->
+    <div id="background"></div>
+
+    <!-- 캐릭터 스프라이트 레이어 -->
+    <div id="characters"></div>
+
+    <!-- 대화 박스 -->
+    <div id="textbox" class="hidden">
+      <div id="speaker"></div>
+      <div id="dialogue"></div>
+      <div id="continue-hint">▼</div>
+    </div>
+
+    <!-- 선택지 레이어 -->
+    <div id="choices" class="hidden"></div>
+
+    <!-- 상단 메뉴 -->
+    <div id="menu">
+      <button data-action="save" title="저장">💾</button>
+      <button data-action="load" title="불러오기">📂</button>
+      <button data-action="auto" title="자동 진행">▶</button>
+      <button data-action="skip" title="빨리 넘기기">⏩</button>
+      <button data-action="mute" title="음소거">🔊</button>
+    </div>
+
+    <!-- 타이틀 화면 -->
+    <div id="title-screen">
+      <h1 id="title-text">Visual Novel</h1>
+      <p id="title-sub">Ricecookey Engine</p>
+      <div id="title-buttons">
+        <button data-action="start">시작하기</button>
+        <button data-action="continue">이어하기</button>
+      </div>
+    </div>
+
+    <!-- 로딩/오류 표시 -->
+    <div id="toast" class="hidden"></div>
+  </div>
+
+  <!-- BGM / SFX -->
+  <audio id="bgm" loop></audio>
+  <audio id="sfx"></audio>
+
+  <script src="js/parser.js"></script>
+  <script src="js/engine.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

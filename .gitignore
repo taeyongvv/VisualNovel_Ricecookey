@@ -1,0 +1,14 @@
+# OS / editor
+.DS_Store
+Thumbs.db
+*.swp
+.idea/
+.vscode/
+
+# Node (혹시 dev 서버용으로 추가될 경우)
+node_modules/
+npm-debug.log*
+
+# 로컬 빌드/임시
+dist/
+*.log

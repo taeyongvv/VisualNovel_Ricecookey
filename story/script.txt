@@ -1,0 +1,38 @@
+# title: 라이스쿠키와의 어느 오후
+# 이 파일은 형식 예시입니다. 다른 에이전트는 이 형식에 맞춰 텍스트만 생성하면 됩니다.
+
+== start ==
+@bg classroom
+@music bgm_main
+
+방과 후의 교실. 창밖으로 노을이 길게 드리워져 있다.
+
+@show 리코 smile center
+리코: 어, 아직 안 갔네? 같이 갈래?
+
+나: 응, 마침 너 기다리고 있었어.
+
+리코: 정말? 왠지 기쁜걸.
+
+* 솔직하게 마음을 전한다 -> route_honest
+* 농담으로 얼버무린다 -> route_joke
+
+== route_honest ==
+@show 리코 happy center
+나: 사실… 너랑 더 이야기하고 싶었어.
+리코: ……그런 말, 갑자기 하면 반칙이야.
+@sound heartbeat
+리코: 그래도, 고마워.
+-> ending
+
+== route_joke ==
+나: 하하, 그냥 집 가는 길이 같아서 그렇지 뭐.
+@show 리코 pout center
+리코: 칫, 재미없어.
+-> ending
+
+== ending ==
+@hide 리코
+@music stop
+둘은 함께 교문을 나섰다. 노을은 여전히 길었다.
+@end
