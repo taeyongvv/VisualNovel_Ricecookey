@@ -12,7 +12,8 @@
   const SETTINGS_KEY = "vn_ricecookey_settings";
 
   // 이미지/오디오 파일 후보 확장자
-  const IMG_EXT = ["svg", "png", "jpg", "jpeg", "webp", "gif"];
+  // 실제 래스터 아트(png 등)를 우선 사용하고, 없으면 생성된 svg 플레이스홀더로 폴백
+  const IMG_EXT = ["png", "webp", "jpg", "jpeg", "gif", "svg"];
   const AUDIO_EXT = ["mp3", "ogg", "wav", "m4a"];
 
   class Engine {
