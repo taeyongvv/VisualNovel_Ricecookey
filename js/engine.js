@@ -93,13 +93,24 @@
         this.shownChars[name] = el;
       }
       el.className = `character shown ${pos || "center"}`;
-      const spriteName = expr ? `${name}_${expr}` : name;
-      const candidates = this.resolveAsset("assets/char", spriteName, IMG_EXT);
+      const candidates = this.spriteCandidates(name, expr);
       this.tryLoadImage(candidates, (url) => {
         el.innerHTML = `<img src="${url}" alt="${name}" style="max-height:92vh;" />`;
       }, () => {
         el.innerHTML = `<div class="placeholder">${name}${expr ? " (" + expr + ")" : ""}</div>`;
       });
+    }
+
+    // 표정 스프라이트 탐색 순서:
+    //   1) 표정 실제 이미지(png 등)  2) 기본 실제 이미지  3) 표정 svg  4) 기본 svg
+    // → 표정 이미지가 아직 없으면 '기본 실제 스프라이트'로 폴백(플레이스홀더보다 우선).
+    spriteCandidates(name, expr) {
+      const keys = expr ? [`${name}_${expr}`, name] : [name];
+      const raster = ["png", "webp", "jpg", "jpeg", "gif"];
+      const list = [];
+      for (const k of keys) for (const ext of raster) list.push(`assets/char/${k}.${ext}`);
+      for (const k of keys) list.push(`assets/char/${k}.svg`);
+      return list;
     }
 
     hideCharacter(name) {
