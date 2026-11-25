@@ -65,7 +65,7 @@
       }, () => {
         // 이미지가 없으면 라벨 표시용 그라데이션
         el.style.backgroundImage = "";
-        el.style.backgroundColor = "#1a1f2e";
+        el.style.backgroundColor = "";
         this.toast(`배경 '${name}' 이미지 없음 (텍스트로 진행)`, 1200);
       });
     }
@@ -95,7 +95,7 @@
       el.className = `character shown ${pos || "center"}`;
       const candidates = this.spriteCandidates(name, expr);
       this.tryLoadImage(candidates, (url) => {
-        el.innerHTML = `<img src="${url}" alt="${name}" style="max-height:92vh;" />`;
+        el.innerHTML = `<img src="${url}" alt="${name}" />`;
       }, () => {
         el.innerHTML = `<div class="placeholder">${name}${expr ? " (" + expr + ")" : ""}</div>`;
       });
@@ -172,6 +172,10 @@
       if (fromState) {
         this.restoreState(fromState);
       } else {
+        // 새로 시작: 이전 판의 무대(캐릭터·배경)를 비운다
+        this.hideCharacter("");
+        this.setBackgroundImage("");
+        this.state = { ip: 0, bg: "", music: this.state.music, chars: {}, lastSpeaker: "" };
         this.ip = 0;
         this.next();
       }
@@ -341,6 +345,14 @@
     /* ---------- 종료 ---------- */
     end() {
       this.clearTimers();
+      this.auto = false;
+      this.skip = false;
+      if (this.dom.menu) {
+        this.dom.menu.querySelectorAll('[data-action="auto"], [data-action="skip"]').forEach((b) => {
+          b.classList.remove("active");
+          b.setAttribute("aria-pressed", "false");
+        });
+      }
       this.dom.speaker.textContent = "";
       this.dom.dialogue.textContent = "— 끝 —";
       this.dom.continueHint.classList.remove("show");
@@ -406,7 +418,12 @@
       return this.settings.muted;
     }
 
-    toggleAuto() { this.auto = !this.auto; if (this.auto && !this.typing) this.onLineComplete(); return this.auto; }
+    toggleAuto() {
+      this.auto = !this.auto;
+      if (this.auto && !this.typing) this.onLineComplete();
+      if (!this.auto) clearTimeout(this.autoTimer); // 끄면 예약된 진행도 취소
+      return this.auto;
+    }
     toggleSkip() {
       this.skip = !this.skip;
       if (this.skip) this.proceed();

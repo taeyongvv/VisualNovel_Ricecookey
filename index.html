@@ -2,8 +2,13 @@
 <html lang="ko">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Visual Novel — Ricecookey</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+  <meta name="theme-color" content="#12110f" />
+  <title>Ricecookey</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gowun+Batang&display=swap" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/variable/pretendardvariable-dynamic-subset.min.css" />
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
@@ -18,33 +23,50 @@
     <div id="textbox" class="hidden">
       <div id="speaker"></div>
       <div id="dialogue"></div>
-      <div id="continue-hint">▼</div>
+      <svg id="continue-hint" class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 9 6 6 6-6"/></svg>
     </div>
 
     <!-- 선택지 레이어 -->
     <div id="choices" class="hidden"></div>
 
-    <!-- 상단 메뉴 -->
+    <!-- 상단 메뉴 (아이콘: lucide) -->
     <div id="menu">
-      <button data-action="save" title="저장">💾</button>
-      <button data-action="load" title="불러오기">📂</button>
-      <button data-action="auto" title="자동 진행">▶</button>
-      <button data-action="skip" title="빨리 넘기기">⏩</button>
-      <button data-action="mute" title="음소거">🔊</button>
+      <button data-action="save" title="저장" aria-label="저장">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="M15.2 3a2 2 0 0 1 1.4.6l3.8 3.8a2 2 0 0 1 .6 1.4V19a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2z"/><path d="M17 21v-7a1 1 0 0 0-1-1H8a1 1 0 0 0-1 1v7"/><path d="M7 3v4a1 1 0 0 0 1 1h7"/></svg>
+      </button>
+      <button data-action="load" title="불러오기" aria-label="불러오기">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><path d="m6 14 1.5-2.9A2 2 0 0 1 9.24 10H20a2 2 0 0 1 1.94 2.5l-1.54 6a2 2 0 0 1-1.95 1.5H4a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h3.9a2 2 0 0 1 1.69.9l.81 1.2a2 2 0 0 0 1.67.9H18a2 2 0 0 1 2 2v2"/></svg>
+      </button>
+      <button data-action="auto" title="자동 진행" aria-label="자동 진행" aria-pressed="false">
+        <svg class="icon when-off" viewBox="0 0 24 24" aria-hidden="true"><polygon points="6 3 20 12 6 21 6 3"/></svg>
+        <svg class="icon when-on" viewBox="0 0 24 24" aria-hidden="true"><rect x="14" y="4" width="4" height="16" rx="1"/><rect x="6" y="4" width="4" height="16" rx="1"/></svg>
+      </button>
+      <button data-action="skip" title="빨리 넘기기" aria-label="빨리 넘기기" aria-pressed="false">
+        <svg class="icon" viewBox="0 0 24 24" aria-hidden="true"><polygon points="13 19 22 12 13 5 13 19"/><polygon points="2 19 11 12 2 5 2 19"/></svg>
+      </button>
+      <button data-action="mute" title="음소거" aria-label="음소거" aria-pressed="false">
+        <svg class="icon when-off" viewBox="0 0 24 24" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><path d="M15.54 8.46a5 5 0 0 1 0 7.07"/><path d="M19.07 4.93a10 10 0 0 1 0 14.14"/></svg>
+        <svg class="icon when-on" viewBox="0 0 24 24" aria-hidden="true"><polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/><line x1="22" x2="16" y1="9" y2="15"/><line x1="16" x2="22" y1="9" y2="15"/></svg>
+      </button>
     </div>
 
-    <!-- 타이틀 화면 -->
+    <!-- 타이틀 화면: 스크립트 머리말(# title / # subtitle / # title_bg / # title_char)로 채워짐 -->
     <div id="title-screen">
-      <h1 id="title-text">Visual Novel</h1>
-      <p id="title-sub">Ricecookey Engine</p>
-      <div id="title-buttons">
-        <button data-action="start">시작하기</button>
-        <button data-action="continue">이어하기</button>
+      <div id="title-art" aria-hidden="true"></div>
+      <div id="title-panel">
+        <p id="title-sub"></p>
+        <h1 id="title-text">Visual Novel</h1>
+        <span class="seal-rule" aria-hidden="true"></span>
+        <div id="title-buttons">
+          <button data-action="start" class="primary">시작하기</button>
+          <button data-action="continue">이어하기</button>
+        </div>
       </div>
+      <p id="title-credit">Ricecookey</p>
     </div>
 
     <!-- 로딩/오류 표시 -->
-    <div id="toast" class="hidden"></div>
+    <div id="toast" class="hidden" role="status" aria-live="polite"></div>
   </div>
 
   <!-- BGM / SFX -->

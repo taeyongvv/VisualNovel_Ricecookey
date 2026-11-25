@@ -317,6 +317,9 @@ def main():
 
     out = []
     out.append(f"# title: {TITLE}")
+    out.append(f"# subtitle: {GENRE}")
+    out.append("# title_bg: dawn_room")
+    out.append("# title_char: elisia cold")
     out.append(f"# 자동 변환: tools/convert_notion.py (원본: 노션 폴리싱본 15편)")
     out.append("")
 
