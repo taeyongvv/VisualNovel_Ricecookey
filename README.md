@@ -41,11 +41,16 @@ VisualNovel_Ricecookey/
 │   ├── engine.js       # 런타임 (타이핑/이미지/오디오/세이브/분기)
 │   └── main.js         # DOM 연결 · 입력 처리 · 스크립트 로딩
 ├── story/
-│   └── script.txt      # 노벨 스크립트 (← 다른 에이전트가 채우는 부분)
+│   ├── script.txt              # 플레이용 스크립트 (convert_notion.py 가 생성)
+│   └── source/
+│       ├── polished_raw.md     # 원고 (노션 폴리싱본 15편)
+│       └── direction.json      # 연출 데이터: 화자·표정·장면 전환 큐
 ├── assets/
-│   ├── bg/             # 배경 이미지 (classroom.jpg 등)
-│   ├── char/           # 캐릭터 스프라이트 (리코_smile.png 등)
-│   └── audio/          # BGM / 효과음 (bgm_main.mp3 등)
+│   ├── PROMPTS.md      # 배경/캐릭터 이미지 생성 프롬프트
+│   ├── bg/             # 배경 (study.jpg, salon.jpg … + svg 플레이스홀더)
+│   ├── char/           # 캐릭터 스프라이트 (elisia.png, elisia_cold.png, kalian.png …)
+│   └── audio/          # BGM (bgm_main.wav, bgm_tense.wav, bgm_romance.wav)
+├── tools/              # 변환기 · 에셋 생성기 · 스크립트 검사기
 └── README.md
 ```
 
@@ -84,7 +89,8 @@ VisualNovel_Ricecookey/
 | `@end` | 스토리 종료 |
 
 > 자산 파일 이름은 확장자를 생략할 수 있습니다. 엔진이 png/jpg/webp, mp3/ogg/wav 등을 자동으로 시도합니다.
-> 캐릭터 표정 스프라이트는 `이름_표정` 규칙으로 찾습니다 (예: `@show 리코 smile` → `assets/char/리코_smile.png`).
+> 캐릭터 표정 스프라이트는 `이름_표정` 규칙으로 찾습니다 (예: `@show elisia smile` → `assets/char/elisia_smile.png`).
+> 표정 이미지가 없으면 기본 스프라이트(`elisia.png`)로 폴백합니다. 파일명은 인코딩 문제를 피하려고 영문을 씁니다.
 
 ### 예시
 
@@ -138,7 +144,35 @@ python3 tools/gen_bgm.py           # assets/audio/*.wav (합성 앰비언트 BGM
 - 추후 진짜 일러스트·음원이 생기면 **같은 파일명으로 교체**만 하면 됩니다
   (예: `assets/bg/study.svg` → `assets/bg/study.png`. 엔진이 확장자를 자동 탐색).
 
-편별 배경·BGM·캐릭터 매핑은 `tools/convert_notion.py` 의 `SCENE` 표에서 관리합니다.
+편별 배경·BGM·캐릭터 매핑은 `story/source/direction.json` 의 `openings` 에서 관리합니다
+(없는 편은 `tools/convert_notion.py` 의 `SCENE` 표로 폴백).
+
+---
+
+## 원고 → 스크립트 변환
+
+```bash
+python3 tools/convert_notion.py      # story/source/* → story/script.txt
+node tools/validate.js story/script.txt
+```
+
+`story/script.txt` 는 생성물이므로 직접 고치지 말고 원고나 `direction.json` 을 고친 뒤 다시 변환합니다.
+
+`direction.json` 구성:
+
+| 키 | 내용 |
+|---|---|
+| `openings` | 편 번호 → `{bg, music, elisia_expr, kalian_present}` 편 시작 무대 |
+| `quotes` | `{chapter, text, speaker, expr}` — 원고의 따옴표 대사에 화자·엘리시아 표정 지정. `speaker: null` 이면 편지/쪽지처럼 따옴표째 내레이션 |
+| `cues` | `{chapter, anchor, cmds}` — `anchor` 문구가 든 문장 **앞**에 연출 명령(`@bg`/`@music`/`@show`/`@hide`) 삽입 |
+
+- 칼리안이 등장(`@show kalian`)하면 엘리시아는 자동으로 왼쪽, 퇴장(`@hide kalian`)하면 중앙으로 이동합니다.
+- 같은 표정·위치의 중복 `@show` 는 자동 제거됩니다.
+- `quotes` 에 없는 대사는 기존 휴리스틱(인접 지문의 '이름+발화동사')으로 화자를 추정합니다.
+- 앵커나 대사를 원고에서 못 찾으면 변환 시 `경고:` 로 출력됩니다.
+
+> 원고의 엘리시아 지칭 대명사는 '그' → '그녀'로 교정되어 있습니다(칼리안 등 남성 지칭은 '그' 유지).
+> 노션 원본을 다시 가져오면 이 교정이 사라지므로 노션 쪽에도 반영해 두세요.
 
 ---
 
@@ -164,7 +198,7 @@ GitHub Actions 배포 워크플로에서도 배포 전에 자동으로 이 검�
 
 ## 배포 (GitHub Pages)
 
-`main` 또는 작업 브랜치에 푸시하면 `.github/workflows/deploy-pages.yml` 이
+`main` 브랜치에 푸시하면 `.github/workflows/deploy-pages.yml` 이
 저장소 루트를 그대로 GitHub Pages로 배포합니다 (빌드 불필요).
 
 최초 1회만 저장소 설정이 필요합니다:

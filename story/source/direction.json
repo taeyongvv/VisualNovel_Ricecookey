@@ -1,0 +1,1136 @@
+{
+ "_comment": "tools/convert_notion.py 가 읽는 연출 데이터. openings=편 시작 무대, quotes=(편,대사)→화자/표정, cues=앵커 문장 앞 연출 명령",
+ "openings": {
+  "1": {
+   "bg": "dawn_room",
+   "music": "bgm_main",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "2": {
+   "bg": "study",
+   "music": "bgm_main",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "3": {
+   "bg": "salon",
+   "music": "bgm_main",
+   "elisia_expr": "neutral",
+   "kalian_present": false
+  },
+  "4": {
+   "bg": "auction",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "5": {
+   "bg": "northroad",
+   "music": "bgm_main",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "6": {
+   "bg": "study",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "7": {
+   "bg": "study",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": true
+  },
+  "8": {
+   "bg": "dawn_room",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "9": {
+   "bg": "treasury",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "10": {
+   "bg": "salon",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "11": {
+   "bg": "ballroom",
+   "music": "bgm_main",
+   "elisia_expr": "neutral",
+   "kalian_present": true
+  },
+  "12": {
+   "bg": "salon",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "13": {
+   "bg": "banquet",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "14": {
+   "bg": "treasury",
+   "music": "bgm_tense",
+   "elisia_expr": "cold",
+   "kalian_present": false
+  },
+  "15": {
+   "bg": "study",
+   "music": "bgm_romance",
+   "elisia_expr": "neutral",
+   "kalian_present": true
+  }
+ },
+ "quotes": [
+  {
+   "chapter": 1,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' - 엘리시아의 독백성 대사."
+  },
+  {
+   "chapter": 1,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "봉인된 전갈에 적힌 문장(서면)."
+  },
+  {
+   "chapter": 1,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "문밖의 정체불명 인물; 본문에서 정체 미공개."
+  },
+  {
+   "chapter": 2,
+   "text": "파혼장을 쓰는 대신 북부 보급 상단의 빚 장부를 산다.",
+   "speaker": null,
+   "note": "전날 밤 전갈 문구를 회상(서면 인용)."
+  },
+  {
+   "chapter": 2,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' - 엘리시아의 독백성 대사."
+  },
+  {
+   "chapter": 2,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "봉인된 전갈에 적힌 문장(서면)."
+  },
+  {
+   "chapter": 2,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "문밖의 정체불명 인물; 본문에서 정체 미공개."
+  },
+  {
+   "chapter": 3,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' - 엘리시아의 독백성 대사."
+  },
+  {
+   "chapter": 3,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "봉인된 전갈에 적힌 문장(서면)."
+  },
+  {
+   "chapter": 3,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "문밖의 정체불명 인물; 본문에서 정체 미공개."
+  },
+  {
+   "chapter": 4,
+   "text": "세 배.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "경매 입찰 선언."
+  },
+  {
+   "chapter": 4,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' - 엘리시아의 독백성 대사."
+  },
+  {
+   "chapter": 4,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "봉인된 전갈에 적힌 문장(서면)."
+  },
+  {
+   "chapter": 4,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "문밖의 정체불명 인물; 본문에서 정체 미공개."
+  },
+  {
+   "chapter": 5,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' - 엘리시아의 독백성 대사."
+  },
+  {
+   "chapter": 5,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "봉인된 전갈에 적힌 문장(서면)."
+  },
+  {
+   "chapter": 5,
+   "text": "드디어 찾았군.",
+   "speaker": "칼리안",
+   "note": "05편 전갈 예고('북부대공 칼리안이 파혼 담판을 하러 왔다가…')와 06편 첫 문장(칼리안 도착)으로 보아 문밖 인물은 칼리안으로 추정."
+  },
+  {
+   "chapter": 6,
+   "text": "앉으시겠습니까, 대공 각하.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "Line 364 says 엘리시아 spoke first; she's offering a seat to win control of the negotiation"
+  },
+  {
+   "chapter": 6,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "the narration that follows ('낮게 중얼거리자') marks it as her muttered motto"
+  },
+  {
+   "chapter": 6,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "written message inside the sealed letter"
+  },
+  {
+   "chapter": 6,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "unknown figure at the door who calls her by name"
+  },
+  {
+   "chapter": 7,
+   "text": "공작 부인 자리는 필요 없습니다.",
+   "speaker": "엘리시아",
+   "expr": "cold"
+  },
+  {
+   "chapter": 7,
+   "text": "그럼 원하는 것이 무엇입니까.",
+   "speaker": "칼리안",
+   "note": "line 418 says 'his voice was low and flat'"
+  },
+  {
+   "chapter": 7,
+   "text": "회장 직인입니다.",
+   "speaker": "엘리시아",
+   "expr": "smile",
+   "note": "her decisive counter-demand, delivered with confidence"
+  },
+  {
+   "chapter": 7,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold"
+  },
+  {
+   "chapter": 7,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "letter text"
+  },
+  {
+   "chapter": 7,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리"
+  },
+  {
+   "chapter": 8,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "stock template paragraph; no listener is defined"
+  },
+  {
+   "chapter": 8,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "letter text"
+  },
+  {
+   "chapter": 8,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리"
+  },
+  {
+   "chapter": 9,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "stock template paragraph"
+  },
+  {
+   "chapter": 9,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "letter text"
+  },
+  {
+   "chapter": 9,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리"
+  },
+  {
+   "chapter": 10,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "stock template paragraph"
+  },
+  {
+   "chapter": 10,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "letter text"
+  },
+  {
+   "chapter": 10,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리"
+  },
+  {
+   "chapter": 11,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' follows; 엘리시아's recurring motto"
+  },
+  {
+   "chapter": 11,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "written message inside the sealed dispatch"
+  },
+  {
+   "chapter": 11,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "unseen visitor behind the door; identity withheld"
+  },
+  {
+   "chapter": 12,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' follows; 엘리시아's recurring motto"
+  },
+  {
+   "chapter": 12,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "written message inside the sealed dispatch"
+  },
+  {
+   "chapter": 12,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "unseen visitor behind the door; identity withheld"
+  },
+  {
+   "chapter": 13,
+   "text": "당신이 만든 것을 내가 알고 있다.",
+   "speaker": null,
+   "note": "hidden written message 엘리시아 planted in the invitation seal for 레나르트; written, not spoken"
+  },
+  {
+   "chapter": 13,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' follows; 엘리시아's recurring motto"
+  },
+  {
+   "chapter": 13,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "written message inside the sealed dispatch"
+  },
+  {
+   "chapter": 13,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "unseen visitor behind the door; identity withheld"
+  },
+  {
+   "chapter": 14,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "cold",
+   "note": "'그가 낮게 중얼거리자' follows; 엘리시아's recurring motto"
+  },
+  {
+   "chapter": 14,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "written message inside the sealed dispatch"
+  },
+  {
+   "chapter": 14,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "unseen visitor behind the door; identity withheld"
+  },
+  {
+   "chapter": 15,
+   "text": "본 계약의 당사자 엘리시아 로웬은 로스탄 북부 보급 상단의 공동 회장으로서—",
+   "speaker": null,
+   "note": "contract text written by 칼리안 (document)"
+  },
+  {
+   "chapter": 15,
+   "text": "뜻밖의 조항이군요.",
+   "speaker": "엘리시아",
+   "expr": "smile",
+   "note": "'엘리시아가 말했다' follows"
+  },
+  {
+   "chapter": 15,
+   "text": "공동 회장이라는 조항은 누가 제안했습니까.",
+   "speaker": "엘리시아",
+   "expr": "neutral",
+   "note": "follow-up question to silent 칼리안; unattributed but alternation makes it hers"
+  },
+  {
+   "chapter": 15,
+   "text": "내가.",
+   "speaker": "칼리안",
+   "note": "short answer to her question"
+  },
+  {
+   "chapter": 15,
+   "text": "사랑은 흔들려도 계약서는 남는다.",
+   "speaker": "엘리시아",
+   "expr": "smile",
+   "note": "motto; 칼리안 on stage but '그가 낮게 중얼거리자' is 엘리시아 by series pattern"
+  },
+  {
+   "chapter": 15,
+   "text": "네가 바꾼 오늘 때문에 내일의 주인이 움직였다.",
+   "speaker": null,
+   "note": "written message inside the sealed dispatch"
+  },
+  {
+   "chapter": 15,
+   "text": "드디어 찾았군.",
+   "speaker": "낯선 목소리",
+   "note": "unseen visitor behind the door; identity withheld"
+  }
+ ],
+ "cues": [
+  {
+   "chapter": 1,
+   "line": 34,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@music bgm_tense"
+   ]
+  },
+  {
+   "chapter": 1,
+   "line": 45,
+   "anchor": "승리를 크게 떠들지 않았다",
+   "cmds": [
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 1,
+   "line": 61,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 1,
+   "line": 73,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 2,
+   "line": 104,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@music bgm_tense"
+   ]
+  },
+  {
+   "chapter": 2,
+   "line": 113,
+   "anchor": "승리를 크게 떠들지 않았다",
+   "cmds": [
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 2,
+   "line": 127,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 2,
+   "line": 139,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 3,
+   "line": 146,
+   "anchor": "그 비웃음을 들으며 향수 원료 창고",
+   "cmds": [
+    "@bg study",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 3,
+   "line": 170,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@music bgm_tense"
+   ]
+  },
+  {
+   "chapter": 3,
+   "line": 179,
+   "anchor": "승리를 크게 떠들지 않았다",
+   "cmds": [
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 3,
+   "line": 193,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 3,
+   "line": 205,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 4,
+   "line": 230,
+   "anchor": "그 둔함을 기다렸다가 정확히 찔렀다",
+   "cmds": [
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 4,
+   "line": 249,
+   "anchor": "승리를 크게 떠들지 않았다",
+   "cmds": [
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 4,
+   "line": 251,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다",
+   "cmds": [
+    "@bg study"
+   ]
+  },
+  {
+   "chapter": 4,
+   "line": 263,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 4,
+   "line": 275,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 5,
+   "line": 292,
+   "anchor": "가장 먼저 계약서를 확인했다",
+   "cmds": [
+    "@bg study"
+   ]
+  },
+  {
+   "chapter": 5,
+   "line": 306,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@music bgm_tense"
+   ]
+  },
+  {
+   "chapter": 5,
+   "line": 315,
+   "anchor": "승리를 크게 떠들지 않았다",
+   "cmds": [
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 5,
+   "line": 329,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 5,
+   "line": 335,
+   "anchor": "문이 열렸다. 그리고 그곳에는",
+   "cmds": [
+    "@show elisia left",
+    "@show kalian cold right"
+   ]
+  },
+  {
+   "chapter": 5,
+   "line": 341,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile left"
+   ]
+  },
+  {
+   "chapter": 6,
+   "line": 346,
+   "anchor": "그것이 공식적인 방문 이유였다",
+   "cmds": [
+    "@show elisia cold left",
+    "@show kalian cold right"
+   ]
+  },
+  {
+   "chapter": 6,
+   "line": 366,
+   "anchor": "칼리안은 앉았다. 그리고 계산서를 보았다.",
+   "cmds": [
+    "@show elisia smile left"
+   ]
+  },
+  {
+   "chapter": 6,
+   "line": 374,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@show elisia cold left"
+   ]
+  },
+  {
+   "chapter": 6,
+   "line": 385,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다.",
+   "cmds": [
+    "@hide kalian",
+    "@bg dawn_room",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 6,
+   "line": 397,
+   "anchor": "문밖에서 발소리가 멈췄다.",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 6,
+   "line": 409,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 7,
+   "line": 420,
+   "anchor": "회장 직인입니다.",
+   "cmds": [
+    "@show elisia smile left"
+   ]
+  },
+  {
+   "chapter": 7,
+   "line": 444,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@show elisia cold left"
+   ]
+  },
+  {
+   "chapter": 7,
+   "line": 455,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다.",
+   "cmds": [
+    "@hide kalian",
+    "@bg dawn_room",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 7,
+   "line": 467,
+   "anchor": "문밖에서 발소리가 멈췄다.",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 7,
+   "line": 479,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 8,
+   "line": 498,
+   "anchor": "성당 구호품 기증 장부.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 8,
+   "line": 512,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 8,
+   "line": 524,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다.",
+   "cmds": [
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 8,
+   "line": 535,
+   "anchor": "문밖에서 발소리가 멈췄다.",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 8,
+   "line": 547,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 9,
+   "line": 554,
+   "anchor": "두 블록 떨어진 마차 안에서",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 9,
+   "line": 570,
+   "anchor": "성당 구호 사업 보고서를 제국 의회에",
+   "cmds": [
+    "@bg court",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 9,
+   "line": 589,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다.",
+   "cmds": [
+    "@bg dawn_room",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 9,
+   "line": 601,
+   "anchor": "문밖에서 발소리가 멈췄다.",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 9,
+   "line": 613,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 10,
+   "line": 622,
+   "anchor": "손끝에는 마도 마차의 감촉이",
+   "cmds": [
+    "@bg study",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 10,
+   "line": 624,
+   "anchor": "하지만 숫자는 엘리시아 편이었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 10,
+   "line": 644,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 10,
+   "line": 655,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다.",
+   "cmds": [
+    "@bg dawn_room",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 10,
+   "line": 665,
+   "anchor": "칼리안은 전장 보급 계약을",
+   "cmds": [
+    "@music bgm_romance"
+   ]
+  },
+  {
+   "chapter": 10,
+   "line": 667,
+   "anchor": "문밖에서 발소리가 멈췄다.",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 10,
+   "line": 679,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 11,
+   "line": 682,
+   "anchor": "무도회장에 칼리안 아스테르가 나타났을 때",
+   "cmds": [
+    "@bg ballroom",
+    "@music bgm_main",
+    "@show elisia left",
+    "@show kalian right"
+   ]
+  },
+  {
+   "chapter": 11,
+   "line": 702,
+   "anchor": "엘리시아 로웬은 그 둔함을 기다렸다가",
+   "cmds": [
+    "@show elisia cold left"
+   ]
+  },
+  {
+   "chapter": 11,
+   "line": 708,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@music bgm_tense"
+   ]
+  },
+  {
+   "chapter": 11,
+   "line": 719,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다",
+   "cmds": [
+    "@hide kalian",
+    "@bg study",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 11,
+   "line": 731,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 11,
+   "line": 743,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 12,
+   "line": 746,
+   "anchor": "향수가 독이라는 소문은 사흘 만에",
+   "cmds": [
+    "@bg salon",
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 12,
+   "line": 764,
+   "anchor": "시음회는 결투장이 되었다",
+   "cmds": [
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 12,
+   "line": 785,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다",
+   "cmds": [
+    "@bg study",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 12,
+   "line": 797,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 12,
+   "line": 809,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 13,
+   "line": 812,
+   "anchor": "독살 사건의 범인은 왕실 재무관의 조카였다",
+   "cmds": [
+    "@bg banquet",
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 13,
+   "line": 850,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다",
+   "cmds": [
+    "@bg study",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 13,
+   "line": 861,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 13,
+   "line": 873,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 14,
+   "line": 876,
+   "anchor": "왕실 금고가 비는 밤은 제국력 9월",
+   "cmds": [
+    "@bg treasury",
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 14,
+   "line": 915,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다",
+   "cmds": [
+    "@bg study",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 14,
+   "line": 927,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 14,
+   "line": 939,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 15,
+   "line": 942,
+   "anchor": "칼리안 아스테르가 내민 계약서의 첫 줄에는",
+   "cmds": [
+    "@bg study",
+    "@music bgm_romance",
+    "@show elisia left",
+    "@show kalian right"
+   ]
+  },
+  {
+   "chapter": 15,
+   "line": 962,
+   "anchor": "뜻밖의 조항이군요",
+   "cmds": [
+    "@show elisia smile left"
+   ]
+  },
+  {
+   "chapter": 15,
+   "line": 978,
+   "anchor": "위기는 곧바로 찾아왔다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold left"
+   ]
+  },
+  {
+   "chapter": 15,
+   "line": 989,
+   "anchor": "밤이 깊자 진짜 보상이 도착했다",
+   "cmds": [
+    "@hide kalian",
+    "@music bgm_main",
+    "@show elisia center"
+   ]
+  },
+  {
+   "chapter": 15,
+   "line": 1001,
+   "anchor": "그 문장을 읽고 잠시 멈췄다",
+   "cmds": [
+    "@bg finale",
+    "@music bgm_romance",
+    "@show elisia smile center"
+   ]
+  },
+  {
+   "chapter": 15,
+   "line": 1003,
+   "anchor": "문밖에서 발소리가 멈췄다",
+   "cmds": [
+    "@music bgm_tense",
+    "@show elisia cold center"
+   ]
+  },
+  {
+   "chapter": 15,
+   "line": 1015,
+   "anchor": "천천히 웃었다.",
+   "cmds": [
+    "@show elisia smile center"
+   ]
+  }
+ ]
+}

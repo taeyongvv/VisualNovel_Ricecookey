@@ -16,3 +16,7 @@ __pycache__/
 # 로컬 빌드/임시
 dist/
 *.log
+
+# gpt-image 생성 작업물 (결과는 assets/ 로 복사)
+generated-images/
+generated-images-jobs*.json
