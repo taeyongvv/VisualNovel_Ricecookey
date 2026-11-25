@@ -19,10 +19,8 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  deploy:
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+  # 업로드와 배포를 별도 job 으로 분리 (같은 job 에서 바로 조회하면 artifact 를 못 찾는 경우가 있음)
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -41,6 +39,13 @@ jobs:
           # 저장소 루트 전체를 그대로 업로드 (빌드 불필요)
           path: "."
 
+  deploy:
+    needs: build
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v5
